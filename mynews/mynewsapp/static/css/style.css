@@ -1,16 +1,15 @@
-body {
-    background-color: red;
-}
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
 .row {
     justify-content: center;
 
 }
 
 .logo {
-
+    font-family: "Jost", sans-serif;
     font-size: 1.9rem;
     font-weight: 600;
-    color: green;
+    color: black;
 }
 
 /* Display date */
@@ -47,7 +46,7 @@ body {
 }
 
 .c-color {
-    color: #d83c08;
+    color: black;
 }
 
 .category-name {
