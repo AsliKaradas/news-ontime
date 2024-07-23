@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'cloudinary',
     'cloudinary_storage',
+    'django_summernote',
     'mynewsapp',
 ]
 
@@ -140,20 +141,17 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'mynewsapp/static'),
 ]
 
-# Media 
+# Default primary key field type
+# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Media 
 cloudinary.config(
     cloud_name = 'dobaou0cg', 
     api_key = '435284993525748', 
     api_secret = 'AOJiUvveiAHLaETqlqT3o8XXF_U'
 )
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 MEDIA_URL = '/media/'
-
-
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

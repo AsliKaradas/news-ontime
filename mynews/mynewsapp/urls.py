@@ -3,10 +3,11 @@ from . import views
 from django.contrib.auth import views as auth_views
 
 urlpatterns =  [
+    path('home/', views.home, name='home'),
     path('', views.NewsList.as_view(), name="home"),
-    path('add_news/', views.AddNewsPost.as_view(), name="add_news"),
+    path('add_news_post/', views.AddNewsPost.as_view(), name="add_news_post"),
     path('login_user/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
-    path('logout_user/', auth_views.LogoutView.as_view, name='logout'),
+    path('logout_user/', views.logout_user, name='logout'),
     path('signup_user/', views.signup_user, name='signup'),
     path('password_change/', auth_views.PasswordChangeView.as_view(), name='password_change'),
     path('password_change/done/', auth_views.PasswordChangeDoneView.as_view(), name='password_change_done'),
@@ -14,4 +15,5 @@ urlpatterns =  [
     path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
+    path('news/<slug:slug>', views.NewsDetail.as_view(), name='article'),
  ]

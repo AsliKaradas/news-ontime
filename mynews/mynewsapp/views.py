@@ -9,6 +9,7 @@ from django.contrib import messages
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import UserCreationForm 
 from .forms import SignUpForm 
+from django.views import generic, View
 
 
 # Create your views here.
@@ -23,7 +24,8 @@ class AddNewsPost(CreateView):
     model = Article
     template_name = ''
     form_class = AddNewsForm
-
+    template_name = 'add_news_post.html'
+    success_url = '/home/'
 
     def form_valid(self, form):
         author = Author.objects.get(user=self.request.user)
@@ -35,8 +37,29 @@ class AddNewsPost(CreateView):
         return self.request.user.is_authenticated and self.request.user.is_superuser
 
     def handle_no_permission(self):
-        return HttpResponse("You are not an admin.")  
+        return HttpResponse("You are not an Admin.")  
 
+class NewsDetail(View):
+
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Article.objects.filter(slug=slug)
+        news = get_object_or_404(queryset, slug=slug)
+        comments = news.comments.filter(approved=True).order_by("-created_on")
+        liked = False
+        if news.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        return render(
+            request,
+            "article.html",
+            {
+                "article": news,
+                "comments": comments,
+                "commented": False,
+                "liked": liked,
+                "form": CommentForm()
+            },
+        )
 
 def login_user(request):
     if request.method == "POST":
@@ -73,7 +96,7 @@ def signup_user(request):
 def logout_user(request):
     if request.user.is_authenticated:
         logout(request)
-        messages.success(request, ("You were logged out!"))
+        messages.success(request, "You were logged out!")
     return redirect('home')
 
 def home(request):

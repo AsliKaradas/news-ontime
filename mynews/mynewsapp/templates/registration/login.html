@@ -19,6 +19,7 @@
         <button class="btn right mt-4 " type="submit">{% trans "Sign In" %}</button>
       </form>
       <div class="col-md-8 mt-5 info-text">
+        {% url 'signup' as signup_url %}
         <p>{% blocktrans %} No account? Please <a class="link signup" href="{{ signup_url }}">Sign
             Up</a>{% endblocktrans %}</p>
       </div>

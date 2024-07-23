@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django_summernote import urls as summernote_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('mynewsapp.urls')),
     path('', include('django.contrib.auth.urls')),
+    path('summernote/', include(summernote_urls)),
+    
 ]

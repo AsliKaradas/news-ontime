@@ -9,6 +9,12 @@ from django.template.defaultfilters import slugify
 
 User = get_user_model()
 
+STATUS = (
+    (0, 'Draft'),
+    (1, 'Published'),
+)
+
+
 class Author(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_image = CloudinaryField('image', default='placeholder')
@@ -16,15 +22,29 @@ class Author(models.Model):
     def __str__(self):
         return self.user.username
 
+
+class Category(models.Model):
+    category_name = models.CharField(max_length=25)
+
+    def __str__(self):
+        return self.category_name
+
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+
+
 class Article(models.Model):
     news_title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
-        Author, on_delete=models.CASCADE, related_name='news_article')
+    Author, on_delete=models.CASCADE, related_name='news_article')
     news_image = CloudinaryField('image', default='placeholder')
     news_overview = models.TextField(null=True)
     news_content = models.TextField(null=True)
     created_on = models.DateTimeField(auto_now_add=True)
+    news_categories = models.ManyToManyField('Category')
+    published_status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='news_like', blank=True)
 
@@ -43,18 +63,7 @@ class Article(models.Model):
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.news_title)
-        return super().save(*args, **kwargs)           
-
-
-class Category(models.Model):
-    category_name = models.CharField(max_length=25)
-
-    def __str__(self):
-        return self.category_name
-
-    class Meta:
-        verbose_name = 'Category'
-        verbose_name_plural = 'Categories'
+        return super().save(*args, **kwargs)
 
 
 class Comment(models.Model):
