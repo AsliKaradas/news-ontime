@@ -1,4 +1,5 @@
 from django.urls import reverse_lazy
+from django.urls import reverse
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import CommentForm, AddNewsForm, UpdateNewsForm
 from mynewsapp.models import Article, Author
@@ -11,8 +12,10 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import UserCreationForm 
 from .forms import SignUpForm 
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Article, Comment
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.auth import logout
 
 
 # Create your views here.
@@ -41,7 +44,7 @@ class AddNewsPost(CreateView):
 
     def handle_no_permission(self):
         return HttpResponse("You are not an Admin.")  
-        
+
 class Like(View):
     def post(self, request, slug, *args, **kwargs):
         news = get_object_or_404(Article, slug=slug)
@@ -136,12 +139,9 @@ def signup_user(request):
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
 
-
-def logout_user(request):
-    if request.user.is_authenticated:
-        logout(request)
-        messages.success(request, "You were logged out!")
-    return redirect('home')
+def custom_logout(request):
+    logout(request)
+    return redirect('/')
 
 def home(request):
     return render(request, 'index.html')

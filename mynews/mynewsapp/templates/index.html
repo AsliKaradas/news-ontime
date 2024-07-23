@@ -36,8 +36,8 @@
             {% if user.is_authenticated %}
             {% if user.is_superuser%}
             <div class="manage-news">
-              <a href="">Edit <i class="fa-solid fa-pen-to-square"></i></a>
-              <a href="">Delete <i class="fa-solid fa-trash"></i></a>
+              <a href="{% url 'edit' article.slug  %}">Edit <i class="fa-solid fa-pen-to-square"></i></a>
+              <a href="{% url 'delete' article.slug  %}">Delete <i class="fa-solid fa-trash"></i></a>
             </div>
             {% endif%}
             {% endif%}

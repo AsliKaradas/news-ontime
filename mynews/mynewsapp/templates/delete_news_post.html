@@ -1,13 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 offset-md-2 mt-5">
             <div class="form-group">
                 <form method="POST">
                     {% csrf_token %}
-                    <strong class="warning">Importent <i class="fa-solid fa-circle-exclamation"></i></strong>
+                    <strong class="warning">Final Confirmation <i class="fa-solid fa-circle-exclamation"></i></strong>
                     <br>
                     <br>
-                    <p>Are you sure you want to <span id="delete-txt">Delete</span> this news post?</p>
+                    <p>This will permanently <span id="delete-txt">Delete</span> the news post. Are you sure you want to proceed?</p>
                     <br>
                     <br>
                     <input class="btn btn-primary" type="submit" value="Confirm"/>

@@ -9,6 +9,7 @@
     font-size: 1.9rem;
     font-weight: 600;
     color: black;
+    letter-spacing: 10px;
 }
 .logo:hover {
     color: #a74ebf;
@@ -18,9 +19,16 @@
     color: white;
     border-radius: 4px;
 }
+.navbar-nav .login:hover {
+    background-color: #75268b;
+  }
+.navbar-nav .signup:hover {
+    color: #75268b;
+}
 .info-text .link.signup, .navbar-nav .signup {
     color: #a74ebf;
 }
+
 /* Display date */
 .display-date {
     text-align: center;
@@ -28,7 +36,6 @@
     padding: 0.5%;
     font-size: 0.9rem;
     font-weight: 600;
-
 }
 
 /* News post card  */
@@ -89,6 +96,7 @@
 .page-link:hover {
     text-decoration: none;
     color: #a74ebf;
+    border: 1px solid #a74ebf;
 }
 /* Footer */
 .social-link {
@@ -132,23 +140,31 @@
 
     text-decoration: underline;
 }
+.terms {
+    font-size: 15px;
+    color: #414a53;
+}
 
 /* comment */
 .btn-primary {
-    margin: 3%;
+    margin-top: 2%;
+    margin-bottom: 3%;
     border: none;
 }
-.avator {
+.avatar {
     height: 40px;
     width: 40px;
 }
-
 .like-btn {
     border: none;
     padding: 2%;
     color: #a74ebf;
     background: transparent;
 }
+.fa-comments {
+    color: #a74ebf;
+}
+
 /* Add Post Form */
 .btn-secondary {
     margin: 8% 0%;
@@ -175,6 +191,9 @@
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
   }
+.card-img:hover {
+    border: 1px solid #a74ebf;
+}
 
 /* Media query */
 @media (max-width: 768px) {
@@ -187,17 +206,33 @@
     .category-name-d {
         font-size: small;
     }
+    .navbar-text {
+        padding-right: 0px;
+    }
 }
 @media (min-width: 768px) {
     .card {
         padding: 10px;
-
     }
 }
-@media (min-width: 768px) {
+@media (max-width: 992px) {
+    .navbar-nav .login {
+        width: 70px;
+        padding-left: 8px;
+        margin-left: -8px;
+    }
+}
+@media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav {
         flex-direction: row;
         position: absolute;
         right: 1rem;
-      }
+    }
+    .navbar-nav.login-info {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        color: black;
+        right: 15rem;
+        position: absolute;
+    }
 }
