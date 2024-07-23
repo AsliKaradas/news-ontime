@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-wfv4vh#ljbgjn)at_#g=1@aa=bdrfnh41sw#k#78tvj(!hy-$_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-aslikaradas-newsontime-wnzxmzojgav.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-aslikaradas-newsontime-wnzxmzojgav.ws.codeinstitute-ide.net', 'https://neewo-a26db386d628.herokuapp.com/']
 
 
 # Application definition
