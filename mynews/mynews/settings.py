@@ -87,7 +87,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mynews.wsgi.application'
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'home'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases

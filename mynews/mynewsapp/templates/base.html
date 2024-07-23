@@ -46,23 +46,23 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="">Home</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
           </li>
           {% if user.is_authenticated %}
-          {% if user.is_superuser%}
+         
           <li class="nav-item">
             <a class="nav-link" href="">New Post</a>
           </li>
-          {% endif %}
+      
           <li class="nav-item">
-            <a class="nav-link" href="">SignOut</a>
+            <a class="nav-link" href="{% url 'logout' %}">SignOut</a>
           </li>
           {% else %}
           <li class="nav-item">
             <a class="nav-link login" href="{% url 'login' %}">SignIn</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link signup" href="">SignUp</a>
+            <a class="nav-link signup" href="{% url 'signup' %}">SignUp</a>
           </li>
           {% endif %}
         </ul>

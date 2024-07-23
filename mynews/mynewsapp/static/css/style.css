@@ -11,12 +11,12 @@
     color: black;
 }
 .navbar-nav .login {
-    background: #cf4b1f;
+    background: #a74ebf;
     color: white;
     border-radius: 4px;
 }
 .info-text .link.signup, .navbar-nav .signup {
-    color: #cf4b1f;
+    color: #a74ebf;
 }
 /* Display date */
 .display-date {
@@ -43,7 +43,7 @@
     text-decoration: none;
 }
 .card-title:hover {
-    color: #cf4b1f;
+    color: #a74ebf;
     font-weight: 700;
 
 }
@@ -72,13 +72,13 @@
 
 /* Pagination */
 .page-link {
-    background-color: #cf4b1f;
+    background-color: #a74ebf;
     color: white;
     text-decoration: none;
 }
 .page-link:hover {
     text-decoration: none;
-    color: #cf4b1f;
+    color: #a74ebf;
 }
 /* Footer */
 .social-link {
@@ -97,17 +97,18 @@
 .social-link i {
     list-style-type: none;
     font-size: 120%;
-    color: #353434;
+    color: #a74ebf;
 }
 
 /* Athentication */
 .btn {
-    background-color: #cf4b1f;
+    background-color: #a74ebf;
     color: white;
 }
 .btn:hover {
     background-color: white;
-    color: #cf4b1f;
+    color: #a74ebf;
+    border: 1px solid #a74ebf;
 }
 .my-container {
     margin: 8%;
@@ -135,7 +136,7 @@
 .like-btn {
     border: none;
     padding: 2%;
-    color: #cf4b1f;
+    color: #a74ebf;
     background: transparent;
 }
 /* Add Post Form */
