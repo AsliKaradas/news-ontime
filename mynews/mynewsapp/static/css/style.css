@@ -10,6 +10,9 @@
     font-weight: 600;
     color: black;
 }
+.logo:hover {
+    color: #a74ebf;
+}
 .navbar-nav .login {
     background: #a74ebf;
     color: white;
@@ -172,7 +175,7 @@
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
   }
-  
+
 /* Media query */
 @media (max-width: 768px) {
     .card {

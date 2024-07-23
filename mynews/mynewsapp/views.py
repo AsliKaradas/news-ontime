@@ -1,3 +1,4 @@
+from django.urls import reverse_lazy
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import CommentForm, AddNewsForm, UpdateNewsForm
 from mynewsapp.models import Article, Author
@@ -10,6 +11,8 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import UserCreationForm 
 from .forms import SignUpForm 
 from django.views import generic, View
+from .models import Article, Comment
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 
 # Create your views here.
@@ -38,6 +41,17 @@ class AddNewsPost(CreateView):
 
     def handle_no_permission(self):
         return HttpResponse("You are not an Admin.")  
+        
+class Like(View):
+    def post(self, request, slug, *args, **kwargs):
+        news = get_object_or_404(Article, slug=slug)
+        if news.likes.filter(id=request.user.id).exists():
+            news.likes.remove(request.user)
+        else:
+            news.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('article', args=[slug]))
+
 
 class NewsDetail(View):
 
@@ -60,6 +74,36 @@ class NewsDetail(View):
                 "form": CommentForm()
             },
         )
+    def post(self, request, slug, *args, **kwargs):
+
+        queryset = Article.objects.filter(published_status=1)
+        news = get_object_or_404(queryset, slug=slug)
+        comments = news.comments.filter(approved=True).order_by("-created_on")
+        liked = False
+        if news.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        form = CommentForm(data=request.POST)
+        if form.is_valid():
+            form.instance.user = request.user
+            comment = form.save(commit=False)
+            comment.news = news
+            comment.save()
+        else:
+            form = CommentForm()
+
+        return render(
+            request,
+            "article.html",
+            {
+                "article": news,
+                "comments": comments,
+                "commented": True,
+                "form": form,
+                "liked": liked
+            },
+        )
+
 
 def login_user(request):
     if request.method == "POST":
@@ -101,3 +145,15 @@ def logout_user(request):
 
 def home(request):
     return render(request, 'index.html')
+
+class UpdateNews(UpdateView):
+    model = Article
+    template_name = 'edit_news_post.html'
+    form_class = UpdateNewsForm
+    success_url = reverse_lazy('home')
+
+
+class DeleteNews(DeleteView):
+    model = Article
+    template_name = 'delete_news_post.html'
+    success_url = reverse_lazy('home')    

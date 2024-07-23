@@ -18,10 +18,10 @@
         <div class="col-auto mb-3">
           <!-- <div class="post-container"> -->
           <div class="card">
-            <a href="" class="news-link">
+            <a href="{% url 'article' article.slug  %}" class="news-link">
 
               {% if "placeholder" in article.news_image.url %}
-              <img class="card-img-top" src="" alt="News Image">
+              <img class="card-img-top" src="{% static 'images/News_Post_Image.jpg' %}" alt="News Image">
               {% else %}
               <img class="card-img-top" src="{{ article.news_image.url }}" alt="News Image">
               {% endif %}
