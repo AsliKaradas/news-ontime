@@ -29,7 +29,7 @@
   <!-- Site title and favicon for NewsOnTime-->
   <link rel="icon" type="image/x-icon" >
 
-  <title>NewsOnTime</title>
+  <title>NEEWO</title>
 
 </head>
 
@@ -38,7 +38,7 @@
   <!-- Site NavBar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href=""><span class="logo">NewsOnTime</span></a>
+      <a class="navbar-brand" href=""><span class="logo">NEEWO</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -59,33 +59,35 @@
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="">SignUp</a>
+            <a class="nav-link login" href="{% url 'login' %}">SignIn</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">SignIn</a>
+            <a class="nav-link signup" href="">SignUp</a>
           </li>
           {% endif %}
         </ul>
-        <div class="navbar-nav ml-auto">
+        <!--div class="navbar-nav ml-auto">
           {% if user.is_authenticated %}
           {% if user.is_superuser%}
           <span class="navbar-text"><strong>Logged as Admin: {{ user.username }}</strong></span>
           {% endif %}
           {% endif %}
-        </div>
+        </div-->
       </div>
     </div>
   </nav>
 
-  {% for message in messages %}
+
   <div class="container-fluid p-0">
-    <div class="alert {{ message.tags }} alert-dismissible" id="flash-msg" role="alert">
-      <!-- <span aria-hidden="True">&times;</span> -->
-      </button>
-      {{ message }}
-    </div>
+    {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+    {% endif %}
   </div>
-  {% endfor %}
 
   <main class="flex-shrink-0 main-bg">
     {% block content %}
