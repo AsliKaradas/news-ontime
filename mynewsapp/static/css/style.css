@@ -217,7 +217,10 @@
     .navbar-nav .login {
         width: 70px;
         padding-left: 8px;
-        margin-left: -8px;
+        margin-left: -10px;
+    }
+    .xs {
+        margin-left: -9px;
     }
 }
 @media (min-width: 992px) {

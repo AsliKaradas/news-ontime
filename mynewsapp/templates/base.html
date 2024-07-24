@@ -53,18 +53,18 @@
           {% if user.is_authenticated %}
           {% if user.is_superuser%}
           <li class="nav-item">
-            <a class="nav-link signup" href="{% url 'add_news_post' %}">New Post</a>
+            <a class="nav-link xs signup" href="{% url 'add_news_post' %}">New Post</a>
           </li>
           {% endif %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'logout' %}">SignOut</a>
+            <a class="nav-link xs" href="{% url 'logout' %}">SignOut</a>
           </li>
           {% else %}
           <li class="nav-item">
             <a class="nav-link login" href="{% url 'signup' %}">SignUp</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link signup" href="{% url 'login' %}">Log In</a>
+            <a class="nav-link xs signup" href="{% url 'login' %}">Log In</a>
           </li>
           {% endif %}
         </ul>
