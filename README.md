@@ -4,11 +4,11 @@
 ![Mockup](readme-images/Mockup.png)
 
 
-<h3>Overview</h3><br>
+<h3>Overview</h3>
 
 [NEEWO](https://neewo-a26db386d628.herokuapp.com/), your go-to source for the latest fashion and beauty news. Get the scoop on runway trends, celebrity styles, makeup tips, and skincare advice. Discover in-depth articles, exclusive interviews, and expert insights in the world of fashion and cosmetics.
 <br>
-<h3>Project Description</h3><br>
+<h3>Project Description</h3>
 NEEWO is a Django-based web application designed to provide users with up-to-date fashion and beauty news. The platform offers various features for both administrators and regular users to enhance their experience.
 
 
