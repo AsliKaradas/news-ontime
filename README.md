@@ -18,8 +18,14 @@ NEEWO is a Django-based web application designed to provide users with up-to-dat
 <h3>Admin Features</h3>
 
  1.  Post News: Admins can create and publish new articles about fashion and beauty trends.<br>
+ 
+ ![admin_page](readme-images/admin_page.png)
  2.  Edit News: Admins can edit existing news articles.<br>
+ 
+ ![edit](readme-images/edit_post_page.png)
  3.  Delete News: Admins can delete news articles that are no longer relevant or appropriate.<br>
+ 
+ ![delete](readme-images/delete_post_page.png)
  4.  View Likes: Admins can view the number of likes on each news article.<br>
  5.  Comment Management: Admins can view, approve, or delete comments made by users.<br>
  6.  News List Management: Admins can view a list of all news articles.<br>
@@ -33,12 +39,17 @@ NEEWO is a Django-based web application designed to provide users with up-to-dat
 
  1. View News List: Users can browse through a list of all published news articles.<br>
  2. Comment: Users can comment on news articles.<br>
+
+ ![comment](readme-images/comment_user_loggedin.png)
+ 
  3. Like: Users can like news articles.<br>
 <br>
 <h2>User Experience</h2>
 
 <h3>Homepage<br></h3>
 The homepage of NEEWO showcases a dynamic news list, displaying the latest articles along with their associated images. Each news item includes a link to the detailed article page and indicates the category of the post. This structured layout ensures that users can quickly access the most recent and relevant fashion and beauty news.
+
+![homepage](readme-images/homepage.png)
 
 <h3>Article Detail Page</h3>
 Each news article page includes:<br>
@@ -50,11 +61,18 @@ Each news article page includes:<br>
      * If the user is logged in, they can leave a comment in the designated comment section.<br>
      * If the user is not logged in, they will only see the list of existing comments but won't have the option to comment.<br>
 
+
+![detail](readme-images/news_detail_page.png)
+
 <h3>Sign Up and Login Pages</h3>
 
  * Sign Up Page: New users can create an account by providing necessary details such as username, email, and password.<br>
  * Login Page: Existing users can log in to access more features by entering their username and password.<br>
  * Welcome Message: Once logged in, users are greeted with a personalized welcome message like "Welcome, Admin" or "Welcome, User."<br>
+
+![signup](readme-images/signup_page.png)
+
+![login](readme-images/signin_page.png)
 
 <h3>Footer</h3>
 
@@ -62,6 +80,8 @@ The footer of the website includes social media links, allowing users to connect
  * GitHub<br>
  * LinkedIn<br>
  * Instagram<br>
+ 
+![login](readme-images/footer.png)
 
 <h3>Admin Dashboard</h3>
 The admin dashboard provides easy access to all administrative features:<br>
@@ -84,7 +104,11 @@ The design of NEEWO is sleek and modern, using the following color scheme:
 
 <h3>Image Styling</h3>
 All images on the site are displayed with a grayscale filter to create a chic and timeless aesthetic. <br>The CSS for this is:
-css
+
+![filter](readme-images/css_filter.png)
+
+![filter](readme-images/image_with_filter.png) ![filter](readme-images/image_withput_filter.png)
+
 <br><br>
 <h2>Deployment</h2>
 
