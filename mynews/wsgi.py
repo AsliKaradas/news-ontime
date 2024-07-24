@@ -21,7 +21,7 @@ logger.addHandler(handler)
 
 logger.debug('Starting WSGI application')
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mynews.mynews.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mynews.settings')
 
 try:
     application = get_wsgi_application()
