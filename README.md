@@ -1,8 +1,11 @@
 <h1>NEEWO: Fashion and Beauty News Portal</h1>
+
+
 ![Mockup](readme-images/Mockup.png)
 
 
 <h3>Overview</h3><br>
+
 [NEEWO](https://neewo-a26db386d628.herokuapp.com/), your go-to source for the latest fashion and beauty news. Get the scoop on runway trends, celebrity styles, makeup tips, and skincare advice. Discover in-depth articles, exclusive interviews, and expert insights in the world of fashion and cosmetics.
 <br>
 <h3>Project Description</h3><br>
