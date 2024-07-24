@@ -13,7 +13,7 @@ NEEWO is a Django-based web application designed to provide users with up-to-dat
 
 
 <br>
-<h2>Features</h2>
+<h2>User Experience</h2>
 
 <h3>Admin Features</h3>
 
@@ -44,7 +44,7 @@ NEEWO is a Django-based web application designed to provide users with up-to-dat
  
  3. Like: Users can like news articles.<br>
 <br>
-<h2>User Experience</h2>
+<h2>Features</h2>
 
 <h3>Homepage<br></h3>
 The homepage of NEEWO showcases a dynamic news list, displaying the latest articles along with their associated images. Each news item includes a link to the detailed article page and indicates the category of the post. This structured layout ensures that users can quickly access the most recent and relevant fashion and beauty news.
