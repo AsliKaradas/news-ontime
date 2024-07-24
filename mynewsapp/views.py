@@ -9,23 +9,19 @@ from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.views import LoginView, LogoutView
-from django.contrib.auth.forms import UserCreationForm 
-from .forms import SignUpForm 
+from django.contrib.auth.forms import UserCreationForm
+from .forms import SignUpForm
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Article, Comment
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth import logout
 
-
-# Create your views here.
-
 class NewsList(ListView):
     model = Article
     template_name = "index.html"
     paginate_by = 6
     
-
 class AddNewsPost(CreateView):
     model = Article
     template_name = ''
@@ -54,7 +50,6 @@ class Like(View):
             news.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('article', args=[slug]))
-
 
 class NewsDetail(View):
 
@@ -107,6 +102,16 @@ class NewsDetail(View):
             },
         )
 
+class UpdateNews(UpdateView):
+    model = Article
+    template_name = 'edit_news_post.html'
+    form_class = UpdateNewsForm
+    success_url = reverse_lazy('home')
+
+class DeleteNews(DeleteView):
+    model = Article
+    template_name = 'delete_news_post.html'
+    success_url = reverse_lazy('home')    
 
 def login_user(request):
     if request.method == "POST":
@@ -121,7 +126,6 @@ def login_user(request):
             return redirect('login')
     else:
         return render(request, 'login.html', {})        
-
 
 def signup_user(request):
     if request.method == 'POST':
@@ -145,15 +149,3 @@ def custom_logout(request):
 
 def home(request):
     return render(request, 'index.html')
-
-class UpdateNews(UpdateView):
-    model = Article
-    template_name = 'edit_news_post.html'
-    form_class = UpdateNewsForm
-    success_url = reverse_lazy('home')
-
-
-class DeleteNews(DeleteView):
-    model = Article
-    template_name = 'delete_news_post.html'
-    success_url = reverse_lazy('home')    
