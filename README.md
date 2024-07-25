@@ -13,19 +13,22 @@ NEEWO is a Django-based web application designed to provide users with up-to-dat
 
 
 <br>
-<h2>User Experience</h2>
+<h2>USER EXPERIENCE</h2>
 
 <h3>Admin Features</h3>
 
  1.  Post News: Admins can create and publish new articles about fashion and beauty trends.<br>
  
  ![admin_page](readme-images/admin_page.png)
+ 
  2.  Edit News: Admins can edit existing news articles.<br>
  
  ![edit](readme-images/edit_post_page.png)
+ 
  3.  Delete News: Admins can delete news articles that are no longer relevant or appropriate.<br>
  
  ![delete](readme-images/delete_post_page.png)
+ 
  4.  View Likes: Admins can view the number of likes on each news article.<br>
  5.  Comment Management: Admins can view, approve, or delete comments made by users.<br>
  6.  News List Management: Admins can view a list of all news articles.<br>
@@ -44,12 +47,31 @@ NEEWO is a Django-based web application designed to provide users with up-to-dat
  
  3. Like: Users can like news articles.<br>
 <br>
-<h2>Features</h2>
+<h2>FEATURES</h2>
 
-<h3>Homepage<br></h3>
-The homepage of NEEWO showcases a dynamic news list, displaying the latest articles along with their associated images. Each news item includes a link to the detailed article page and indicates the category of the post. This structured layout ensures that users can quickly access the most recent and relevant fashion and beauty news.
+<h3>Navigation</h3>
+The navigation feature of the NEEWO fashion and beauty news website is designed to provide a seamless and intuitive user experience.<br><br>
+
+
+![nav](readme-images/nav-bar.png)
+
+<h4>Navbar Admin</h4>
+
+![nav](readme-images/nav-bar_admin.png)
+
+<h4>Responsive Navbar Guest </h4>
+
+![nav](readme-images/responsive_nav-bar.png)
+
+<h4>Responsive Navbar User </h4>
+
+![nav](readme-images/responsive_nav-bar_user.png)
+
+<h3>Homepage</h3>
+The homepage of NEEWO showcases a dynamic news list, displaying the latest articles along with their associated images. Each news item includes a link to the detailed article page and indicates the category of the post. This structured layout ensures that users can quickly access the most recent and relevant fashion and beauty news.<br><br>
 
 ![homepage](readme-images/homepage.png)
+
 
 <h3>Article Detail Page</h3>
 Each news article page includes:<br>
@@ -95,7 +117,28 @@ The admin dashboard provides easy access to all administrative features:<br>
  * Category Management: Options for creating and managing article categories.<br>
  * Settings: Configure site settings such as pagination and view statistics on likes and comments.<br>
 <br>
-<h2>Design and Colors</h2>
+
+<h2>WIREFRAMES</h2>
+I've designed wireframes to layout the structure of your fashion and beauty news website, focusing on a clean, user-friendly, and responsive design. 
+
+<h3>Homepage</h3>
+
+![homepage](readme-images/wireframe_homepage.png)
+
+<h3>News Detail Page</h3>
+
+![detiail](readme-images/wireframe_newsdetail.png)
+
+<h3>Sign In Page</h3>
+
+![login](readme-images/wireframe_signin.png)
+
+<h3>Sign Up Page</h3>
+
+![singup](readme-images/wireframe_signup.png)
+
+
+<h2>DESIGN & COLORS</h2>
 The design of NEEWO is sleek and modern, using the following color scheme:
 
  * #000000 (Black): Used for text and other primary elements.<br>
@@ -110,10 +153,57 @@ All images on the site are displayed with a grayscale filter to create a chic an
 ![filter](readme-images/image_with_filter.png) ![filter](readme-images/image_withput_filter.png)
 
 <br><br>
-<h2>Deployment</h2>
+<h2>TESTING</h2>
+<h3>CI Python Linter</h3>
+
+<h4>settings.py</h4>
+
+![filter](readme-images/settings_py.png)
+
+<h4>views.py</h4>
+
+![filter](readme-images/views_py.png)
+
+<h4>views.py</h4>
+
+![filter](readme-images/views_py.png)
+
+<h4>models.py</h4>
+
+![filter](readme-images/models_py.png)
+
+<h4>forms.py</h4>
+
+![filter](readme-images/forms_py.png)
+
+<h4>forms.py</h4>
+
+![filter](readme-images/forms_py.png)
+
+<h4>admin.py</h4>
+
+![filter](readme-images/admin_py.png)
+
+<h4>urls.py</h4>
+
+![filter](readme-images/urls_py.png)
+
+<h4>app/urls.py</h4>
+
+![filter](readme-images/app_urls_py.png)
+
+<h3>HTML Validation</h3>
+
+![filter](readme-images/html_checker.png)
+
+<h3>CSS Validation</h3>
+
+![filter](readme-images/css_validation.png)
+
+<h2>DEPLOYMENT</h2>
 
 The project is deployed on Heroku. Ensure that all necessary environment variables and configurations are set up in the Heroku dashboard, including the database settings and static file handling.<br>
-<h2>Future Features</h2>
+<h2>FUTURE FEATURES</h2>
 
  1. Newsletter: A feature to allow users to subscribe to a newsletter for regular updates.<br>
  2. Filter and Search for Categories: Advanced filtering and search options to find articles based on categories.<br>
@@ -123,6 +213,6 @@ The project is deployed on Heroku. Ensure that all necessary environment variabl
  6. Save for Later: A feature for users to save articles to read later.<br>
  7. Follow Other Users: Allowing users to follow other users to see their liked and commented articles.<br>
 <br>
-<h2>Conclusion</h2>
+<h2>CONCLUSION</h2>
 
 NEEWO provides a comprehensive platform for users to stay updated with the latest in fashion and beauty. With robust features for both administrators and regular users, the site ensures a seamless and engaging experience for everyone. The clean design, intuitive navigation, and efficient user management make it a reliable source for fashion and beauty news.
