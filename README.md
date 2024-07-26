@@ -302,7 +302,21 @@ The project is deployed on Heroku. Ensure that all necessary environment variabl
 
 <h2>DEPLOYMENT</h2>
 
+<h3>Heroku</h3>
+
 Steps for deployment:
+
+1. Click "New" and select "Create new app".
+2. Input a meaningful name for your app and choose the region best suited to your location.
+3. Select "Settings" from the tabs.
+4. Set the buildbacks to python and NodeJS in that order.
+5. Select "Deploy" from the tabs.
+6. Link the Heroku app to the respository.
+7. Select "GitHub - Connect to GitHub" from deployment methods.
+8. Type GitHub repository by name.
+9. Click Deploy Branch to deploy manually. Manually deployed branches will need re-deploying each time the repo is updated.
+10. Click on Deploy.
+11. Click View button to view the deployed site.
 
 
 
