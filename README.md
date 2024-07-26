@@ -320,6 +320,19 @@ The project is deployed on Heroku. Ensure that all necessary environment variabl
 
 <h2>DEPLOYMENT</h2>
 
+<h3>Data Base</h3>
+
+These steps will create a PostgreSQL database:
+1. Log in to ElephantSQL.com to access your dashboard
+2. Click "Create New Instance"
+3. Set up your plan
+4. Select "Select Region"
+5. Select a data center near you
+6. Then click "Review"
+7. Check your details are correct and then click "Create instance"
+8. Return to the ElephantSQL dashboard and click on the database instance name for this project
+9. In the URL section, click the copy icon to copy the database URL
+
 <h3>Heroku</h3>
 
 Steps for deployment:
@@ -337,7 +350,22 @@ Steps for deployment:
 11. Click View button to view the deployed site.
 
 
+<h2>CREDITS</h2>
 
+<h3>Codes</h3>
+* The code for cards were taken from bootstrap<br>
+
+* The code for displaying current day were taken from [W3Schools](https://www.w3schools.com/django) <br>
+* Django Doc<br>
+* StackOverflow<br>
+
+ <h3>Content</h3>
+
+*  Content for Posts were taken from [Fashionmonitor](https://www.fashionmonitor.com/news)
+
+ <h3>Media</h3>
+  
+* Images all from [Pexels](https://www.pexels.com)
 
 <h2>CONCLUSION</h2>
 
