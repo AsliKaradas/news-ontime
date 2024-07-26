@@ -236,6 +236,24 @@ All images on the site are displayed with a grayscale filter to create a chic an
 
 The project is deployed on Heroku. Ensure that all necessary environment variables and configurations are set up in the Heroku dashboard, including the database settings and static file handling.<br>
 
+<h2>DATA MODEL</h2>
+
+<h3>News Post</h3>
+
+![newspost](readme-images/newspost_data_model.png)
+
+<h3>Comment</h3>
+
+![comment](readme-images/comment_data_model.png)
+
+<h3>Category</h3>
+
+![category](readme-images/category_data_model.png)
+
+<h3>User</h3>
+
+![user](readme-images/user_data_model.png)
+
 <h2>TECHNOLOGIES</h2>
 
 <h3>1. Languages</h3>
