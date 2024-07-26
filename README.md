@@ -234,11 +234,63 @@ All images on the site are displayed with a grayscale filter to create a chic an
 
 ![filter](readme-images/css_validation.png)
 
-<h2>DEPLOYMENT</h2>
-
 The project is deployed on Heroku. Ensure that all necessary environment variables and configurations are set up in the Heroku dashboard, including the database settings and static file handling.<br>
-<h2>FUTURE FEATURES</h2>
 
+<h2>TECHNOLOGIES</h2>
+
+<h3>1. Languages</h3>
+
+* HTML5<br>
+* CSS3<br>
+* Python<br>
+
+<h3>2. Frameworks, Libraries & Programs</h3>
+
+<h4>Core Django Packages</h4>
+
+* Django: The main framework to develop the web application.<br>
+* Django Admin: For managing users, posts, and other models via the admin interface.<br>
+
+<h4>User Authentication and Management</h4>
+
+* django.contrib.auth: Built-in Django authentication system for user registration, login, and management.<br>
+* django-allauth: A package that simplifies user authentication, registration, social account authentication, etc.<br>
+
+<h4>Models for News Posts, Comments, and Likes</h4>
+
+* Django ORM: For creating and managing database models.<br>
+* Django Slugify: To generate URL-friendly slugs for news posts.<br>
+
+<h4>Forms and Validation</h4>
+
+* Django Forms: For handling user input and validating forms for creating and editing posts, comments, etc.<br>
+* crispy-forms and crispy-bootstrap5: To style Django forms easily and consistently using Bootstrap 5.<br>
+
+<h4>Templates and Frontend</h4>
+
+* Django Templates: To render HTML content.<br>
+* Bootstrap: For responsive and modern UI components.<br>
+
+<h4>Handling Media and Static Files</h4>
+
+* django-storages: To handle file uploads (images, videos) efficiently.<br>
+* Pillow: For image processing.<br>
+* cloudinary and dj3-cloudinary-storage: For handling cloud storage of media files (images, videos).<br>
+
+<h4>Additional Features</h4>
+
+* django-summernote: For rich text editing in forms (e.g., when creating or editing articles).<br>
+
+<h4>Database Configuration</h4>
+
+* psycopg2: PostgreSQL database adapter for Python.<br>
+* dj-database-url: For configuring the database from a URL (useful in production environments).<br>
+
+<h4>Deployment and Environment Management</h4>
+
+* gunicorn: WSGI HTTP server for serving your application.<br>
+
+<h2>FUTURE FEATURES</h2>
  1. Newsletter: A feature to allow users to subscribe to a newsletter for regular updates.<br>
  2. Filter and Search for Categories: Advanced filtering and search options to find articles based on categories.<br>
  3. Contact Form: A contact form for users to reach out to the site administrators.<br>
@@ -247,6 +299,14 @@ The project is deployed on Heroku. Ensure that all necessary environment variabl
  6. Save for Later: A feature for users to save articles to read later.<br>
  7. Follow Other Users: Allowing users to follow other users to see their liked and commented articles.<br>
 <br>
+
+<h2>DEPLOYMENT</h2>
+
+Steps for deployment:
+
+
+
+
 <h2>CONCLUSION</h2>
 
 NEEWO provides a comprehensive platform for users to stay updated with the latest in fashion and beauty. With robust features for both administrators and regular users, the site ensures a seamless and engaging experience for everyone. The clean design, intuitive navigation, and efficient user management make it a reliable source for fashion and beauty news.
