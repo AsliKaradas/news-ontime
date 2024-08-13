@@ -69,7 +69,7 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-aslikaradas-newsontime-wnzxmzojgav.ws.codeinstitute-ide.net',
+    'https://8000-aslikaradas-newsontime-wnzxmzojgav.ws.codeinstitute-ide.net'
 ]
 
 ROOT_URLCONF = 'mynews.urls'
