@@ -33,7 +33,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'neewo-a26db386d628.herokuapp.com', 
     'localhost',  
-    '127.0.0.1'  
+    '127.0.0.1',
+    '8000-aslikaradas-newsontime-16c9uw21naj.ws.codeinstitute-ide.net' 
 ]
 # Application definition
 
@@ -99,11 +100,8 @@ LOGOUT_REDIRECT_URL = '/'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
