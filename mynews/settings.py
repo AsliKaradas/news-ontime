@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-wfv4vh#ljbgjn)at_#g=1@aa=bdrfnh41sw#k#78tvj(!hy-$_
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'neewo-a26db386d628.herokuapp.com',
+    'neewo-6a892a76122c.herokuapp.com',
     'localhost',
     '127.0.0.1',
     '8000-aslikaradas-newsontime-16c9uw21naj.ws.codeinstitute-ide.net',
