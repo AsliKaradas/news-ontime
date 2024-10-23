@@ -15,6 +15,8 @@ import os
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+import dj_database_url
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,14 +30,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-wfv4vh#ljbgjn)at_#g=1@aa=bdrfnh41sw#k#78tvj(!hy-$_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    'neewo-a26db386d628.herokuapp.com', 
-    'localhost',  
+    'neewo-a26db386d628.herokuapp.com',
+    'localhost',
     '127.0.0.1',
-    '8000-aslikaradas-newsontime-16c9uw21naj.ws.codeinstitute-ide.net' 
+    '8000-aslikaradas-newsontime-16c9uw21naj.ws.codeinstitute-ide.net',
+    '8000-aslikaradas-newsontime-na5kw2uv97p.ws.codeinstitute-ide.net'
 ]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -69,8 +73,11 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-aslikaradas-newsontime-16c9uw21naj.ws.codeinstitute-ide.net'
+    'https://8000-aslikaradas-newsontime-16c9uw21naj.ws.codeinstitute-ide.net',
+    'https://8000-aslikaradas-newsontime-na5kw2uv97p.ws.codeinstitute-ide.net',
+    'https://neewo-a26db386d628.herokuapp.com'
 ]
+
 
 ROOT_URLCONF = 'mynews.urls'
 
@@ -104,6 +111,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 # Password validation
