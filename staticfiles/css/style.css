@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+.row {
+    justify-content: center;
+
+}
+.logo {
+    font-family: "Jost", sans-serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 10px;
+}
+.logo:hover {
+    color: #a74ebf;
+}
+.navbar-nav .login {
+    background: #a74ebf;
+    color: white;
+    border-radius: 4px;
+}
+.navbar-nav .login:hover {
+    background-color: #75268b;
+  }
+.navbar-nav .signup:hover {
+    color: #75268b;
+}
+.info-text .link.signup, .navbar-nav .signup {
+    color: #a74ebf;
+}
+
+/* Display date */
+.display-date {
+    text-align: center;
+    margin: 1%;
+    padding: 0.5%;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* News post card  */
+.card {
+    width: 22rem;
+    border: none;
+    padding: 4% 0%;
+    background-color: transparent;
+}
+.card-title {
+    font-weight: 650;
+    color: #292828;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: #4d4d4d;
+    min-height: 250px;
+}
+.news-link {
+    text-decoration: none;
+}
+.card-title:hover {
+    color: #a74ebf;
+}
+.c-color {
+    color: #a74ebf;
+    padding-right: 5px;
+}
+.category-name {
+    text-transform: uppercase;
+    padding-left: 3%;
+    font-size: 0.9rem;
+}
+.date {
+    font-size: 0.7rem;
+}
+.category-name-d {
+    padding: 2%;
+}
+.content {
+    text-align: justify;
+}
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pagination */
+.page-link {
+    background-color: #a74ebf;
+    color: white;
+    text-decoration: none;
+}
+.page-link:hover {
+    text-decoration: none;
+    color: #a74ebf;
+    border: 1px solid #a74ebf;
+}
+/* Footer */
+.social-link {
+    display: flex;
+    justify-content: center;
+
+}
+.social-link a {
+    text-decoration: none;
+}
+.social-link>li {
+    display: inline;
+    margin: 0.4%;
+    padding: 0.4%;
+}
+.social-link i {
+    list-style-type: none;
+    font-size: 120%;
+    color: #a74ebf;
+}
+
+/* Athentication */
+.btn {
+    background-color: #a74ebf;
+    color: white;
+}
+.btn:hover {
+    background-color: white;
+    color: #a74ebf;
+    border: 1px solid #a74ebf;
+}
+.my-container {
+    margin: 8%;
+}
+.link {
+    color: #404f5e;
+    text-decoration: none;
+}
+.link:hover,
+.link:active {
+
+    text-decoration: underline;
+}
+.terms {
+    font-size: 15px;
+    color: #414a53;
+}
+
+/* comment */
+.btn-primary {
+    margin-top: 2%;
+    margin-bottom: 3%;
+    border: none;
+}
+.avatar {
+    height: 40px;
+    width: 40px;
+}
+.like-btn {
+    border: none;
+    padding: 2%;
+    color: #a74ebf;
+    background: transparent;
+}
+.fa-comments {
+    color: #a74ebf;
+}
+
+/* Add Post Form */
+.btn-secondary {
+    margin: 8% 0%;
+    border: none;
+}
+.warning {
+    padding-top: 20%;
+    color: #db0000;
+    font-size: 2rem;
+}
+#delete-txt {
+    color: #f30000;
+}
+.manage-news a {
+    text-decoration: none;
+    color: #414a53;
+    padding: 3%;
+}
+
+/* Images */
+.card-img, .card-img-top {
+    border-top-left-radius: var(--bs-card-inner-border-radius);
+    border-top-right-radius: var(--bs-card-inner-border-radius);
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+  }
+.card-img:hover {
+    border: 1px solid #a74ebf;
+}
+
+/* Media query */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+    #news-title {
+        font-size: x-large;
+    }
+    .category-name-d {
+        font-size: small;
+    }
+    .navbar-text {
+        padding-right: 0px;
+    }
+}
+@media (min-width: 768px) {
+    .card {
+        padding: 10px;
+    }
+}
+@media (max-width: 992px) {
+    .navbar-nav .login {
+        width: 70px;
+        padding-left: 8px;
+        margin-left: 2px;
+    }
+    .xs {
+        margin-left: 10px;
+    }
+    .navbar-collapse {
+        margin-left: -10px;
+    }
+}
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        position: absolute;
+        right: 1rem;
+    }
+    .navbar-nav.login-info {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        color: black;
+        right: 15rem;
+        position: absolute;
+    }
+}
